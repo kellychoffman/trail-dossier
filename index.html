@@ -343,6 +343,7 @@
 <script>
 /* ---------------- DATA (MTB rides, Aug 2025 – Jun 2026) ---------------- */
 const R = [
+ {d:"2026-06-10",n:"Predator x3",r:"Tiger",dist:8679.1,mt:3874,el:358.2,re:193,cal:416,pr:8,ms:8.08},
  {d:"2026-06-08",n:"Dawn Patrol",r:"Tiger",dist:19994.9,mt:8659,el:744,re:374,cal:925,pr:18,ms:8.86},
  {d:"2026-06-05",n:"Ferdinand w Jas",r:"Raging River",dist:13969.5,mt:4924,el:473.8,re:222,cal:563,pr:4,ms:12.4},
  {d:"2026-06-04",n:"Predator!!",r:"Tiger",dist:8429.7,mt:3833,el:329.8,re:121,cal:400,pr:5,ms:7.86},
@@ -407,7 +408,7 @@ const R = [
 ];
 /* measured heart rate (avg, max) pulled per-ride from the HR strap */
 const HR={
- "Dawn Patrol":[156,179],"Ferdinand w Jas":[158,180],"Predator!!":[149,177],"NOTG":[156,173],
+ "Predator x3":[160,181],"Dawn Patrol":[156,179],"Ferdinand w Jas":[158,180],"Predator!!":[149,177],"NOTG":[156,173],
  "Ferdinand!":[160,176],"hot lap":[153,170],"Dropping back in":[163,180],"Morning Drop In":[162,177],
  "Sturdy prep begins":[149,171],"Dirty Bloom 50":[164,180],"Atlas + Lower Predator":[164,180]
 };
@@ -526,7 +527,7 @@ document.getElementById('minis').innerHTML=[
 const COURSE={dist:16.2,gain:3418,loss:3415,high:2963,low:1432,perMi:211,steep:14};
 /* 4 official timed stages mapped to closest Strava segments + best recent times */
 const STAGES=[
- {n:1,name:"Lower Predator",seg:"Lower Predator",sid:10476241,mi:0.40,time:"2:41",hr:167,note:"ridden 2× in the last month",col:"var(--clay)"},
+ {n:1,name:"Lower Predator",seg:"Lower Predator",sid:10476241,mi:0.40,time:"2:35",hr:172,note:"new PR 6/10 — lapped it 3×",col:"var(--clay)"},
  {n:2,name:"Summit · Close Encounters → ET / Super-T",seg:"Close Encounters → Super-T",sid:32117465,mi:1.24,time:"8:51",hr:160,note:"full top run (CE→ET→Super-T) 17:13 on 6/8",col:"var(--ochre)"},
  {n:3,name:"NOTG from Drop In",seg:"Drop In + NOTG",sid:21687522,mi:1.06,time:"8:43",hr:159,note:"ridden 3× recently · cleaned it 6/3",col:"var(--moss)"},
  {n:4,name:"Atlas",seg:"Atlas Shrugged",sid:31953601,mi:0.58,time:"3:44",hr:161,note:"full Inside→Atlas (1.5 mi) ~9:27",col:"var(--slate)"}
