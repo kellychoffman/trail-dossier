@@ -192,6 +192,18 @@
   @media(max-width:860px){.phaserow{grid-template-columns:1fr 1fr}}
   @media(max-width:520px){.phaserow{grid-template-columns:1fr}}
 
+  /* this-week plan */
+  .weekplan{margin-top:4px}
+  .wpday{display:grid;grid-template-columns:108px 120px 1fr;gap:16px;align-items:center;padding:15px 0 15px 16px;border-bottom:1px solid var(--line-soft);border-left:2px solid var(--c,var(--line));transition:background .25s}
+  .wpday:hover{background:rgba(240,231,212,.02)}
+  .wpday:last-child{border-bottom:none}
+  .wpd-day{font-family:'Instrument Serif',serif;font-size:23px;color:var(--cream);line-height:1;display:flex;flex-direction:column;gap:5px}
+  .wpd-day span{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em}
+  .wpd-tag{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.14em;font-weight:700;color:var(--c,var(--cream-dim));text-transform:uppercase}
+  .wpd-desc{font-size:13.5px;color:var(--cream-dim);line-height:1.55}
+  .wpd-desc b{color:var(--cream);font-weight:600}
+  @media(max-width:680px){.wpday{grid-template-columns:78px 1fr;row-gap:6px;padding-left:14px}.wpd-tag{grid-column:2}.wpd-desc{grid-column:1/-1}}
+
   /* HR log */
   .hrlog .hrow{display:grid;grid-template-columns:64px 215px 1fr 130px;align-items:center;gap:16px;padding:13px 0;border-bottom:1px solid var(--line-soft);transition:background .25s}
   .hrlog .hrow:hover{background:rgba(240,231,212,.02)}
@@ -339,6 +351,47 @@
       <div class="pnote">RELATIVE LOAD, 100 = BIGGEST WEEK. STRUCTURE, NOT GOSPEL.</div>
       <div id="taperchart"></div>
       <div class="phaserow" id="phaserow"></div>
+    </div>
+    <div class="panel" style="margin-top:18px">
+      <div class="ptitle">This week <span class="tag">Jun 29 – Jul 5 · last full-load week</span></div>
+      <div class="pnote">ONE QUALITY COURSE-SIM, BRACKETED BY REAL RECOVERY. YOU LIVE IN ZONE 4, SO GO ACTUALLY EASY ON EASY DAYS SO SATURDAY COUNTS. 19 DAYS OUT.</div>
+      <div class="weekplan">
+        <div class="wpday" style="--c:var(--teal)">
+          <div class="wpd-day">Mon<span>JUN 29</span></div>
+          <div class="wpd-tag">✓ done</div>
+          <div class="wpd-desc"><b>Tiger Monday</b> — 10 mi, 1,920 ft, all Zone 4. Wet and honest.</div>
+        </div>
+        <div class="wpday" style="--c:var(--slate)">
+          <div class="wpd-day">Tue<span>JUN 30</span></div>
+          <div class="wpd-tag">recovery</div>
+          <div class="wpd-desc">Spin the SOMA 45–60 min at <b>HR under 134</b>, or fully rest. Absorb the wet ride. The discipline day.</div>
+        </div>
+        <div class="wpday" style="--c:var(--ochre)">
+          <div class="wpd-day">Wed<span>JUL 1</span></div>
+          <div class="wpd-tag">quality</div>
+          <div class="wpd-desc"><b>Race-pace stage reps</b> at Tiger — Lower Predator, Drop In/NOTG, Atlas at race effort, full recovery between. Lines + intensity. ~1.5–2 hr.</div>
+        </div>
+        <div class="wpday" style="--c:var(--slate)">
+          <div class="wpd-day">Thu<span>JUL 2</span></div>
+          <div class="wpd-tag">easy</div>
+          <div class="wpd-desc">Short Raging River flow lap or a strength session. Keep HR low.</div>
+        </div>
+        <div class="wpday" style="--c:var(--ochre)">
+          <div class="wpd-day">Fri<span>JUL 3</span></div>
+          <div class="wpd-tag">primer</div>
+          <div class="wpd-desc">Short and snappy: a few <b>Z5 sprint efforts</b>, then home. Or rest if Saturday's going big.</div>
+        </div>
+        <div class="wpday" style="--c:var(--clay)">
+          <div class="wpd-day">Sat<span>JUL 4</span></div>
+          <div class="wpd-tag">big day</div>
+          <div class="wpd-desc"><b>Course simulation</b> — 16+ mi, 3,000–4,000 ft at controlled race effort. Practice race fueling. Last big day before taper.</div>
+        </div>
+        <div class="wpday" style="--c:var(--muted)">
+          <div class="wpd-day">Sun<span>JUL 5</span></div>
+          <div class="wpd-tag">easy / off</div>
+          <div class="wpd-desc">Recover from Saturday. Short spin or walk.</div>
+        </div>
+      </div>
     </div>
   </section>
 
