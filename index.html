@@ -413,28 +413,11 @@
     </div>
   </section>
 
-  <!-- ============ 05 SEASON LOAD ============ -->
-  <section class="sec reveal" id="s5" data-title="Season Load">
+  <!-- ============ 05 RIDE BY RIDE ============ -->
+  <section class="sec reveal" id="s6" data-title="Ride by Ride">
     <div class="ghost">05</div>
     <div class="shead">
-      <div class="eyebrow">№ 05 · Season Load</div>
-      <h2>The shape of <em>the season.</em></h2>
-      <div class="dek">Monthly relative effort, MTB only. The May spike is Dirty Bloom, half a year of fitness compressed into one 8½-hour day.</div>
-    </div>
-    <div class="panel chartbox">
-      <div id="loadchart"></div>
-      <div class="legend">
-        <span><i style="background:var(--clay)"></i> Relative effort</span>
-        <span><i style="background:var(--moss)"></i> Elevation gain (ft)</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 06 RIDE BY RIDE ============ -->
-  <section class="sec reveal" id="s6" data-title="Ride by Ride">
-    <div class="ghost">06</div>
-    <div class="shead">
-      <div class="eyebrow">№ 06 · Ride by Ride</div>
+      <div class="eyebrow">№ 05 · Ride by Ride</div>
       <h2>Every ride, <em>the sharp end.</em></h2>
       <div class="dek">Each bar is one MTB ride this year, colored by trail system. The Sedona block, the Dirty Bloom monolith, the June ramp back onto Tiger. Hover for detail.</div>
     </div>
@@ -443,11 +426,11 @@
     </div>
   </section>
 
-  <!-- ============ 07 HALL OF DIRT ============ -->
+  <!-- ============ 06 HALL OF DIRT ============ -->
   <section class="sec reveal" id="s7" data-title="Hall of Dirt">
-    <div class="ghost">07</div>
+    <div class="ghost">06</div>
     <div class="shead">
-      <div class="eyebrow">№ 07 · Hall of Dirt</div>
+      <div class="eyebrow">№ 06 · Hall of Dirt</div>
       <h2>The biggest <em>days.</em></h2>
       <div class="dek">Year-to-date MTB rides ranked by relative effort.</div>
     </div>
@@ -693,32 +676,6 @@ R.forEach(x=>{T.dist+=x.dist;T.el+=x.el;T.mt+=x.mt;T.cal+=x.cal;T.re+=x.re;T.pr+
   }).join('');
 })();
 
-/* ================= 05 MONTHLY LOAD ================= */
-(function(){
-  const order=["2026-01","2026-02","2026-03","2026-04","2026-05","2026-06"];
-  const lab={"2026-01":"JAN","2026-02":"FEB","2026-03":"MAR","2026-04":"APR","2026-05":"MAY","2026-06":"JUN"};
-  const M={};order.forEach(k=>M[k]={re:0,el:0,n:0});
-  R.forEach(x=>{const k=x.d.slice(0,7);if(M[k]){M[k].re+=x.re;M[k].el+=FT(x.el);M[k].n++;}});
-  const W=1100,Hh=320,pad={l:10,r:10,t:30,b:36};
-  const cw=W-pad.l-pad.r,ch=Hh-pad.t-pad.b;
-  const maxRE=Math.max(...order.map(k=>M[k].re));
-  const maxEL=Math.max(...order.map(k=>M[k].el));
-  const bw=cw/order.length;
-  let bars="",els="",pts=[];
-  order.forEach((k,i)=>{
-    const x=pad.l+i*bw,hRE=(M[k].re/maxRE)*ch,w=bw*0.46;
-    bars+=`<rect class="bar" style="transition-delay:${i*80}ms" x="${x+bw*0.2}" y="${pad.t+ch-hRE}" width="${w}" height="${hRE}" rx="3" fill="var(--clay)" opacity=".92" data-tip="<b>${lab[k]}</b><br>${M[k].n} rides<br><span class='tcol'>${fmt(M[k].re)} RE</span> · ${fmt(M[k].el)} ft"/>`;
-    bars+=`<text class="barlabel" x="${x+bw/2}" y="${pad.t+ch-hRE-9}" text-anchor="middle">${M[k].re?fmt(M[k].re):''}</text>`;
-    const ey=pad.t+ch-(M[k].el/maxEL)*ch;
-    pts.push([x+bw/2,ey]);
-    els+=`<circle cx="${x+bw/2}" cy="${ey}" r="3.5" fill="var(--moss)"/>`;
-    bars+=`<text class="axis" x="${x+bw/2}" y="${Hh-12}" text-anchor="middle">${lab[k]}</text>`;
-  });
-  const line=`<polyline fill="none" stroke="var(--moss)" stroke-width="1.6" stroke-dasharray="3 4" points="${pts.map(p=>p.join(',')).join(' ')}" opacity=".8"/>`;
-  let grid="";
-  for(let g=0;g<=3;g++){const y=pad.t+ch-(g/3)*ch;grid+=`<line class="gridline" x1="${pad.l}" y1="${y}" x2="${W-pad.r}" y2="${y}"/>`;}
-  document.getElementById('loadchart').innerHTML=`<svg class="chart" viewBox="0 0 ${W} ${Hh}">${grid}${bars}${line}${els}</svg>`;
-})();
 
 /* ================= 06 RIDE BY RIDE ================= */
 (function(){
