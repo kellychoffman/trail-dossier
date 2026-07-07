@@ -328,7 +328,7 @@
     <div class="panel">
       <div class="coursestats" id="coursestats"></div>
       <div id="profilechart" class="profilebox"></div>
-      <div class="pnote" style="margin:14px 0 0">▲ STAGE MARKERS APPROXIMATE, PLACED ON THE COURSE'S DESCENTS. HIGH POINT 2,963 FT AT MILE ~5.8.</div>
+      <div class="pnote" style="margin:14px 0 0">▲ STAGE MARKERS APPROXIMATE, PLACED AT THE TOP OF EACH TIMED DESCENT. HIGH POINT 2,963 FT AT MILE ~5.8.</div>
     </div>
     <div class="stages" id="stages"></div>
     <div class="insight">
@@ -516,10 +516,10 @@ const REGION_HEX={"Tiger":"#e8632c","Raging River":"#5aa899","Grand Ridge":"#94a
 /* course (Trailforks-stated) + profile from GPX */
 const COURSE={dist:16.2,gain:3418,loss:3415,high:2963,low:1432,perMi:211,steep:14};
 const STAGES=[
- {n:1,name:"Lower Predator",seg:"Lower Predator",sid:10476241,mi:0.40,time:"2:35",hr:172,note:"new PR 6/10 · lapped it 3×",col:"#e8632c",cmi:1.2},
- {n:2,name:"Summit · Close Encounters → ET / Super-T",seg:"Close Encounters → Super-T",sid:32117465,mi:1.24,time:"8:51",hr:160,note:"full top run (CE→ET→Super-T) 17:13 on 6/8",col:"#e0a13c",cmi:6.8},
- {n:3,name:"NOTG from Drop In",seg:"Drop In + NOTG",sid:21687522,mi:1.06,time:"8:14",hr:173,note:"new PR 6/12 (clean run)",col:"#94a44e",cmi:11.9},
- {n:4,name:"Atlas",seg:"Atlas Shrugged",sid:31953601,mi:0.58,time:"3:30",hr:163,note:"new PR 7/1",col:"#5c7d86",cmi:14.2}
+ {n:1,name:"Lower Predator",seg:"Lower Predator",sid:10476241,mi:0.40,time:"2:35",hr:172,note:"new PR 6/10 · lapped it 3×",col:"#e8632c",cmi:1.10},
+ {n:2,name:"Summit · Close Encounters → ET / Super-T",seg:"Close Encounters → Super-T",sid:32117465,mi:1.24,time:"8:51",hr:160,note:"full top run (CE→ET→Super-T) 17:13 on 6/8",col:"#e0a13c",cmi:5.81},
+ {n:3,name:"NOTG from Drop In",seg:"Drop In + NOTG",sid:21687522,mi:1.06,time:"8:14",hr:173,note:"new PR 6/12 (clean run)",col:"#94a44e",cmi:11.45},
+ {n:4,name:"Atlas",seg:"Atlas Shrugged",sid:31953601,mi:0.58,time:"3:30",hr:163,note:"new PR 7/1",col:"#5c7d86",cmi:13.63}
 ];
 const PROFILE=[[0,1444],[0.07,1461],[0.22,1432],[0.36,1456],[0.44,1447],[0.51,1447],[0.76,1587],[1.10,1726],[1.24,1700],[1.32,1640],[1.41,1594],[1.47,1540],[1.56,1484],[1.64,1459],[1.70,1456],[1.86,1443],[1.98,1453],[2.02,1482],[2.07,1499],[2.13,1528],[2.19,1554],[2.26,1595],[2.29,1634],[2.34,1665],[2.39,1694],[2.46,1721],[2.54,1743],[2.62,1769],[2.74,1817],[2.84,1882],[3.01,1924],[3.10,1954],[3.15,1988],[3.22,2030],[3.27,2046],[3.33,2088],[3.41,2138],[3.52,2095],[3.57,2126],[3.65,2170],[3.71,2188],[3.79,2218],[3.85,2248],[3.92,2284],[4.01,2314],[4.08,2349],[4.17,2365],[4.25,2397],[4.30,2411],[4.35,2433],[4.45,2438],[4.51,2456],[4.57,2487],[4.64,2526],[4.68,2559],[4.74,2566],[4.81,2584],[4.87,2597],[4.94,2620],[5.05,2677],[5.17,2635],[5.54,2762],[5.81,2946],[5.96,2944],[6.02,2902],[6.07,2924],[6.16,2887],[6.26,2866],[6.31,2848],[6.41,2819],[6.46,2813],[6.54,2799],[6.61,2773],[6.65,2720],[6.69,2655],[6.76,2567],[6.83,2462],[6.91,2417],[6.98,2354],[7.07,2266],[7.19,2154],[7.36,1994],[7.52,1894],[7.60,1832],[7.73,1744],[7.82,1659],[7.94,1584],[8.28,1503],[8.70,1469],[8.87,1496],[9.08,1597],[9.31,1737],[9.44,1790],[9.56,1837],[9.71,1854],[9.90,1908],[10.15,1958],[10.29,2011],[10.43,2103],[10.62,2224],[10.84,2321],[10.95,2385],[11.07,2458],[11.25,2604],[11.32,2634],[11.45,2677],[11.53,2643],[11.60,2607],[11.72,2583],[11.84,2531],[11.89,2494],[11.98,2395],[12.04,2326],[12.21,2222],[12.30,2201],[12.39,2119],[12.57,2023],[12.66,1979],[12.79,1998],[12.85,2037],[12.95,2081],[13.05,2065],[13.09,2099],[13.20,2134],[13.63,2170],[13.74,2126],[13.81,2113],[13.88,2106],[14.02,2041],[14.16,1933],[14.24,1854],[14.31,1801],[14.35,1740],[14.40,1706],[14.53,1620],[14.59,1561],[14.68,1504],[14.76,1471],[14.96,1459],[15.04,1482],[15.10,1468],[15.18,1448],[15.32,1443],[15.49,1456],[15.56,1448],[15.71,1447],[15.82,1447],[15.89,1456],[16.03,1432],[16.18,1461],[16.25,1444]];
 
@@ -596,7 +596,7 @@ R.forEach(x=>{T.dist+=x.dist;T.el+=x.el;T.mt+=x.mt;T.cal+=x.cal;T.re+=x.re;T.pr+
     <circle cx="${mx}" cy="${my}" r="4.5" fill="${s.col}" stroke="#0d0a07" stroke-width="2"/>
     <text x="${mx}" y="${my-33}" text-anchor="middle" class="barlabel" style="fill:${s.col};font-weight:700;font-size:11px">S${s.n}</text>`;});
   const hx=X(5.81),hy=Y(2946);
-  const hilab=`<circle cx="${hx}" cy="${hy}" r="3.5" fill="var(--clay-soft)"/><text class="barlabel" x="${hx-10}" y="${hy-10}" text-anchor="end" style="fill:var(--clay-soft);font-weight:700">▲ 2,963 FT</text>`;
+  const hilab=`<text class="barlabel" x="${hx-12}" y="${hy-8}" text-anchor="end" style="fill:var(--clay-soft);font-weight:700">▲ 2,963 FT</text>`;
   document.getElementById('profilechart').innerHTML=
    `<svg class="chart" viewBox="0 0 ${W} ${Hh}">
      <defs><linearGradient id="eg" x1="0" y1="0" x2="0" y2="1">
