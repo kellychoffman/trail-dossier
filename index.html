@@ -4,31 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Trail Dossier · MTB Race Prep · Kelly Hoffman</title>
+<title>Race Report · Sturdy Dirty 2026 · Kelly Hoffman</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0d0a07;
-    --bg2:#141008;
-    --panel:#171209;
-    --panel-2:#1d1810;
-    --line:#2c2517;
-    --line-soft:#221c11;
-    --cream:#f0e7d4;
-    --cream-dim:#b3a78c;
-    --muted:#7c715a;
-    --clay:#e8632c;
-    --clay-soft:#f08a55;
-    --clay-deep:#b1442e;
-    --moss:#94a44e;
-    --ochre:#e0a13c;
-    --teal:#5aa899;
-    --slate:#5c7d86;
-    --sky:#7fa6b0;
-    --gold:#e8b54a;
-    --rust:#b1442e;
+    --bg:#0d0a07; --bg2:#141008; --panel:#171209; --panel-2:#1d1810;
+    --line:#2c2517; --line-soft:#221c11;
+    --cream:#f0e7d4; --cream-dim:#b3a78c; --muted:#7c715a;
+    --clay:#e8632c; --clay-soft:#f08a55; --clay-deep:#b1442e;
+    --moss:#94a44e; --ochre:#e0a13c; --teal:#5aa899; --slate:#5c7d86;
+    --sky:#7fa6b0; --gold:#e8b54a; --rust:#b1442e; --win:#ffd166;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -37,25 +24,13 @@
   ::-webkit-scrollbar-track{background:var(--bg)}
   ::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px;border:2px solid var(--bg)}
   ::-webkit-scrollbar-thumb:hover{background:var(--clay-deep)}
-  body{
-    background:var(--bg);
-    color:var(--cream);
-    font-family:'Hanken Grotesk',sans-serif;
-    line-height:1.55;
-    overflow-x:hidden;
-  }
-  .mono{font-family:'JetBrains Mono',monospace}
-
-  /* ---------- atmosphere ---------- */
+  body{background:var(--bg);color:var(--cream);font-family:'Hanken Grotesk',sans-serif;line-height:1.55;overflow-x:hidden}
   .topo{position:fixed;inset:-12% -5%;z-index:0;opacity:.55;pointer-events:none;will-change:transform}
   .grain{position:fixed;inset:0;z-index:3;pointer-events:none;opacity:.055;mix-blend-mode:overlay;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-  .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;
-    background:radial-gradient(120% 90% at 50% 8%,transparent 40%,rgba(8,6,3,.55) 100%);}
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 90% at 50% 8%,transparent 40%,rgba(8,6,3,.55) 100%)}
   .wrap{position:relative;z-index:4;max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
 
-  /* ---------- side nav ---------- */
   .sidenav{position:fixed;left:18px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:4px}
   .sidenav a{display:flex;align-items:center;gap:9px;padding:5px 6px;text-decoration:none;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.16em;transition:color .3s}
   .sidenav a i{width:14px;height:1px;background:currentColor;display:inline-block;transition:width .3s}
@@ -65,51 +40,43 @@
   .sidenav a.on i{width:26px}
   @media(max-width:1180px){.sidenav{display:none}}
 
-  /* ---------- hero ---------- */
   .hero{min-height:100svh;display:flex;flex-direction:column;position:relative}
   .topbar{display:flex;justify-content:space-between;align-items:center;padding-top:30px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-dim);gap:16px;flex-wrap:wrap}
   .topbar .dotsep{color:var(--clay)}
-  .hero-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:7vh 0 4vh}
-  .kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--clay);display:flex;align-items:center;gap:16px}
-  .kicker::before{content:"";width:48px;height:1px;background:var(--clay)}
-  h1{
-    font-family:'Instrument Serif',serif;
-    font-weight:400;font-size:clamp(56px,12vw,178px);line-height:.95;letter-spacing:-.02em;
-    margin:22px 0 0;color:var(--cream);white-space:nowrap;
-  }
-  h1 em{font-style:normal;font-weight:400;color:var(--clay);letter-spacing:-.01em}
-  .hero-sub{margin-top:26px;max-width:54ch;font-size:clamp(16px,1.7vw,20px);font-weight:400;color:var(--cream-dim);line-height:1.65}
+  .hero-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:6vh 0 4vh}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--win);display:flex;align-items:center;gap:16px}
+  .kicker::before{content:"";width:48px;height:1px;background:var(--win)}
+  h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(56px,12vw,178px);line-height:.95;letter-spacing:-.02em;margin:20px 0 0;color:var(--cream);white-space:nowrap}
+  h1 em{font-style:normal;color:var(--clay)}
+  .hero-sub{margin-top:24px;max-width:56ch;font-size:clamp(16px,1.7vw,20px);color:var(--cream-dim);line-height:1.65}
   .hero-sub b{color:var(--cream);font-weight:600}
 
-  .cdrow{margin-top:clamp(34px,6vh,64px);display:flex;align-items:flex-end;gap:clamp(20px,4vw,48px);flex-wrap:wrap}
-  .cdnum{font-family:'Instrument Serif',serif;font-weight:400;font-style:normal;font-size:clamp(92px,15.5vw,218px);line-height:.78;color:var(--clay);letter-spacing:-.03em}
-  .cdmeta{padding-bottom:10px}
-  .cdmeta .l1{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.34em;color:var(--cream-dim);text-transform:uppercase}
-  .cdmeta .l2{font-weight:600;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.01em;margin-top:6px}
-  .cdmeta .l3{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:7px;letter-spacing:.12em}
-  .scrollcue{position:absolute;bottom:86px;right:clamp(20px,4vw,56px);font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.3em;color:var(--muted);writing-mode:vertical-rl;display:flex;align-items:center;gap:10px}
-  .scrollcue::after{content:"";width:1px;height:46px;background:linear-gradient(var(--clay),transparent);animation:cue 2.2s ease infinite}
-  @keyframes cue{0%{transform:scaleY(.2);transform-origin:top;opacity:0}35%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);transform-origin:top;opacity:0}}
+  .resultrow{margin-top:clamp(30px,5vh,54px);display:flex;align-items:flex-end;gap:clamp(24px,5vw,64px);flex-wrap:wrap}
+  .rnum{font-family:'Instrument Serif',serif;font-size:clamp(74px,12vw,168px);line-height:.78;letter-spacing:-.03em}
+  .rnum sup{font-size:.34em;vertical-align:super;letter-spacing:0}
+  .rnum.a{color:var(--win)}
+  .rnum.b{color:var(--clay)}
+  .rmeta{padding-bottom:12px}
+  .rmeta .l1{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.32em;color:var(--cream-dim);text-transform:uppercase}
+  .rmeta .l2{font-weight:600;font-size:clamp(19px,2.2vw,27px);letter-spacing:-.01em;margin-top:5px}
+  .rmeta .l3{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:.12em}
 
-  /* marquee */
   .marq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:rgba(23,18,9,.6);backdrop-filter:blur(4px)}
-  .marq-in{display:flex;width:max-content;animation:marq 30s linear infinite}
+  .marq-in{display:flex;width:max-content;animation:marq 32s linear infinite}
   .marq span{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--cream-dim);padding:13px 0;white-space:nowrap}
-  .marq b{color:var(--clay);font-weight:500}
+  .marq b{color:var(--win);font-weight:500}
   @keyframes marq{to{transform:translateX(-50%)}}
 
-  /* ---------- sections ---------- */
   .sec{position:relative;margin-top:clamp(100px,15vh,190px)}
-  .ghost{font-family:'Instrument Serif',serif;position:absolute;top:clamp(-70px,-9vw,-110px);left:-.04em;z-index:-1;font-weight:400;font-style:normal;font-size:clamp(110px,19vw,240px);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(232,99,44,.16);user-select:none;pointer-events:none;letter-spacing:-.02em}
+  .ghost{font-family:'Instrument Serif',serif;position:absolute;top:clamp(-70px,-9vw,-110px);left:-.04em;z-index:-1;font-weight:400;font-size:clamp(110px,19vw,240px);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(232,99,44,.16);user-select:none;pointer-events:none;letter-spacing:-.02em}
   .shead{margin-bottom:clamp(30px,4vw,46px)}
   .shead .eyebrow{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--clay);margin-bottom:14px;display:flex;align-items:center;gap:14px}
   .shead .eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
   .shead h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(32px,5vw,60px);letter-spacing:-.025em;line-height:1.02}
-  .shead h2 em{font-style:normal;font-weight:400;color:var(--clay-soft)}
-  .shead .dek{margin-top:14px;color:var(--cream-dim);font-weight:400;font-size:clamp(14px,1.4vw,16.5px);max-width:64ch}
+  .shead h2 em{font-style:normal;color:var(--clay-soft)}
+  .shead .dek{margin-top:14px;color:var(--cream-dim);font-size:clamp(14px,1.4vw,16.5px);max-width:66ch}
   .shead .dek b{color:var(--cream);font-weight:600}
 
-  /* big editorial stats */
   .bigstats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
   .bstat{padding:30px clamp(14px,2vw,30px) 36px 0;border-bottom:1px solid var(--line);position:relative}
   .bstat+.bstat{padding-left:clamp(14px,2vw,30px);border-left:1px solid var(--line)}
@@ -117,8 +84,7 @@
   .bstat .num{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(44px,6.2vw,90px);letter-spacing:-.025em;line-height:1;margin-top:18px;color:var(--cream)}
   .bstat .unit{font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.2vw,14px);color:var(--clay);margin-left:6px;letter-spacing:.06em}
   .bstat .foot{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cream-dim);margin-top:12px}
-  .bstat:hover .num{font-style:normal;color:var(--clay-soft);transition:.3s}
-  @media(max-width:860px){.bigstats{grid-template-columns:1fr 1fr}.bstat:nth-child(3){border-left:none;padding-left:0}.bstat:nth-child(odd){padding-left:0;border-left:none}.bstat:nth-child(even){padding-left:clamp(14px,2vw,30px);border-left:1px solid var(--line)}}
+  @media(max-width:860px){.bigstats{grid-template-columns:1fr 1fr}.bstat:nth-child(odd){padding-left:0;border-left:none}.bstat:nth-child(even){padding-left:clamp(14px,2vw,30px);border-left:1px solid var(--line)}}
 
   .minis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
   .mini{background:linear-gradient(165deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:8px;padding:20px 20px 18px;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s}
@@ -129,12 +95,11 @@
   .mini .s{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--cream-dim);margin-top:9px}
   @media(max-width:860px){.minis{grid-template-columns:1fr 1fr}}
 
-  /* panels & charts */
   .panel{background:linear-gradient(170deg,rgba(29,24,16,.75),rgba(20,16,10,.9));border:1px solid var(--line);border-radius:10px;padding:clamp(22px,3vw,36px)}
   .panel .ptitle{font-weight:600;font-size:clamp(17px,1.8vw,21px);letter-spacing:-.01em;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-  .panel .pnote{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px;margin-bottom:22px;line-height:1.7;max-width:90ch}
-  .panel .pnote b{color:var(--cream-dim);font-weight:500}
-  .tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;padding:4px 10px;border-radius:99px;border:1px solid var(--line);color:var(--cream-dim);text-transform:uppercase;font-weight:400}
+  .panel .pnote{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px;margin-bottom:22px;line-height:1.7;max-width:92ch}
+  .tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;padding:4px 10px;border-radius:99px;border:1px solid var(--line);color:var(--cream-dim);text-transform:uppercase}
+  .tag.win{border-color:var(--win);color:var(--win)}
   .chart{width:100%;display:block;overflow:visible}
   .axis text{font-family:'JetBrains Mono',monospace;fill:var(--muted);font-size:10px}
   .barlabel{font-family:'JetBrains Mono',monospace;fill:var(--cream-dim);font-size:10px}
@@ -142,12 +107,9 @@
   .legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--cream-dim);letter-spacing:.06em}
   .legend span{display:inline-flex;align-items:center;gap:7px}
   .legend i{width:9px;height:9px;border-radius:2px;display:inline-block}
-
-  /* svg bar grow */
   .chartbox svg rect.bar{transform:scaleY(0);transform-box:fill-box;transform-origin:bottom;transition:transform .9s cubic-bezier(.16,.84,.26,1)}
   .chartbox.in svg rect.bar{transform:scaleY(1)}
 
-  /* course stats strip */
   .coursestats{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:30px}
   .cs{padding:18px 6px 20px 0}
   .cs+.cs{padding-left:18px;border-left:1px solid var(--line)}
@@ -156,55 +118,54 @@
   .cs .v span{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--clay)}
   @media(max-width:860px){.coursestats{grid-template-columns:repeat(3,1fr)}.cs:nth-child(4){border-left:none;padding-left:0}}
 
-  /* stages */
-  .stages{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
-  .stagecard{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(165deg,var(--panel-2),var(--panel));border-radius:10px;padding:24px 22px 22px;transition:transform .4s cubic-bezier(.2,.7,.2,1),border-color .4s;display:flex;flex-direction:column}
-  .stagecard:hover{transform:translateY(-6px)}
-  .stagecard .bignum{font-family:'Instrument Serif',serif;position:absolute;right:-8px;top:-36px;font-weight:400;font-style:normal;font-size:130px;line-height:1;color:rgba(240,231,212,.05);pointer-events:none;letter-spacing:-.05em}
-  .stagecard .sn{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.3em;color:var(--clay)}
-  .stagecard .snm{font-weight:600;font-size:16.5px;line-height:1.25;margin:10px 0 4px;letter-spacing:-.01em;min-height:2.5em}
-  .stagecard .sseg{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.04em}
-  .stagecard .stime{font-family:'Instrument Serif',serif;font-weight:400;font-style:normal;font-size:clamp(38px,3.6vw,52px);letter-spacing:-.04em;line-height:1;margin-top:18px;color:var(--cream)}
-  .stagecard .shr{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--clay);margin-top:8px;letter-spacing:.08em}
-  .stagecard .smeta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:10px;line-height:1.6;flex:1}
-  .stagecard .seglink{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--cream-dim);text-decoration:none;transition:color .3s;text-transform:uppercase}
-  .stagecard .seglink:hover{color:var(--clay)}
-  .stagecard .seglink::after{content:"↗";color:var(--clay)}
-  @media(max-width:1020px){.stages{grid-template-columns:1fr 1fr}}
-  @media(max-width:560px){.stages{grid-template-columns:1fr}}
+  /* stage comparison */
+  .scomp .srow{display:grid;grid-template-columns:44px 1fr 108px 108px 96px;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid var(--line-soft)}
+  .scomp .srow:last-child{border-bottom:none}
+  .scomp .sn{font-family:'Instrument Serif',serif;font-size:30px;line-height:1;color:var(--c)}
+  .scomp .snm{font-weight:600;font-size:15px;letter-spacing:-.01em;line-height:1.3}
+  .scomp .snm small{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:4px;font-weight:400;letter-spacing:.04em}
+  .scomp .col{text-align:right}
+  .scomp .clab{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .scomp .cval{font-family:'Instrument Serif',serif;font-size:27px;line-height:1;margin-top:5px;color:var(--cream-dim)}
+  .scomp .cval.race{color:var(--win)}
+  .scomp .delta{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--teal);text-align:right}
+  .scomp .delta small{display:block;font-size:9px;color:var(--muted);font-weight:400;letter-spacing:.14em;margin-top:4px}
+  .scomp .head{display:grid;grid-template-columns:44px 1fr 108px 108px 96px;gap:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .scomp .head div{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:right}
+  .scomp .head div:nth-child(2){text-align:left}
+  .scomp .total{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+  .scomp .total .tl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .scomp .total .tv{font-family:'Instrument Serif',serif;font-size:clamp(26px,3.4vw,44px);color:var(--cream);line-height:1}
+  .scomp .total .tv b{color:var(--teal)}
+  @media(max-width:820px){
+    .scomp .head{display:none}
+    .scomp .srow{grid-template-columns:36px 1fr;row-gap:10px}
+    .scomp .col,.scomp .delta{grid-column:span 1;text-align:left}
+    .scomp .srow>.col:nth-of-type(1){grid-column:1/2}
+  }
 
-  /* insight blocks */
   .insight{border:1px solid var(--line);border-radius:10px;padding:clamp(24px,3vw,36px);background:linear-gradient(135deg,rgba(232,99,44,.07),rgba(232,99,44,0) 55%);margin-top:26px}
   .insight .flag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--clay)}
   .insight h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(22px,2.6vw,32px);margin:14px 0 12px;letter-spacing:-.02em;line-height:1.15}
-  .insight h3 em{font-style:normal;font-weight:400;color:var(--clay-soft)}
-  .insight p{font-weight:400;font-size:clamp(14px,1.4vw,16px);color:var(--cream-dim);max-width:72ch;line-height:1.7}
+  .insight h3 em{font-style:normal;color:var(--clay-soft)}
+  .insight p{font-size:clamp(14px,1.4vw,16px);color:var(--cream-dim);max-width:74ch;line-height:1.7}
+  .insight p+p{margin-top:14px}
   .insight p b{color:var(--cream);font-weight:600}
-  .insight.ochre{background:linear-gradient(135deg,rgba(224,161,60,.07),transparent 55%)}
-  .insight.ochre .flag{color:var(--ochre)}
+  .insight.win{background:linear-gradient(135deg,rgba(255,209,102,.09),transparent 55%)}
+  .insight.win .flag{color:var(--win)}
+  .insight.win h3 em{color:var(--win)}
 
-  /* taper phases */
-  .phaserow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
-  .phasepill{background:linear-gradient(165deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:8px;padding:18px 18px;transition:transform .35s}
-  .phasepill:hover{transform:translateY(-3px)}
-  .phasepill .pp-t{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.28em}
-  .phasepill .pp-d{display:block;margin-top:10px;font-weight:400;font-size:13px;color:var(--cream-dim);line-height:1.6}
-  @media(max-width:860px){.phaserow{grid-template-columns:1fr 1fr}}
-  @media(max-width:520px){.phaserow{grid-template-columns:1fr}}
+  /* timeline */
+  .tl{margin-top:6px}
+  .tlrow{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:16px 0 16px 18px;border-left:2px solid var(--c,var(--line));border-bottom:1px solid var(--line-soft);transition:background .25s}
+  .tlrow:hover{background:rgba(240,231,212,.02)}
+  .tlrow:last-child{border-bottom:none}
+  .tld{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;padding-top:3px}
+  .tlt{font-weight:600;font-size:15.5px;letter-spacing:-.01em}
+  .tlx{font-size:13.5px;color:var(--cream-dim);margin-top:5px;line-height:1.6}
+  .tlx b{color:var(--cream);font-weight:600}
+  @media(max-width:680px){.tlrow{grid-template-columns:1fr;gap:6px}}
 
-  /* this-week plan */
-  .weekplan{margin-top:4px}
-  .wpday{display:grid;grid-template-columns:108px 120px 1fr;gap:16px;align-items:center;padding:15px 0 15px 16px;border-bottom:1px solid var(--line-soft);border-left:2px solid var(--c,var(--line));transition:background .25s}
-  .wpday:hover{background:rgba(240,231,212,.02)}
-  .wpday:last-child{border-bottom:none}
-  .wpd-day{font-family:'Instrument Serif',serif;font-size:23px;color:var(--cream);line-height:1;display:flex;flex-direction:column;gap:5px}
-  .wpd-day span{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em}
-  .wpd-tag{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.14em;font-weight:700;color:var(--c,var(--cream-dim));text-transform:uppercase}
-  .wpd-desc{font-size:13.5px;color:var(--cream-dim);line-height:1.55}
-  .wpd-desc b{color:var(--cream);font-weight:600}
-  @media(max-width:680px){.wpday{grid-template-columns:78px 1fr;row-gap:6px;padding-left:14px}.wpd-tag{grid-column:2}.wpd-desc{grid-column:1/-1}}
-
-  /* HR log */
   .hrlog .hrow{display:grid;grid-template-columns:64px 215px 1fr 130px;align-items:center;gap:16px;padding:13px 0;border-bottom:1px solid var(--line-soft);transition:background .25s}
   .hrlog .hrow:hover{background:rgba(240,231,212,.02)}
   .hrlog .hrow:last-child{border-bottom:none}
@@ -218,7 +179,6 @@
   .hrlog .hrv b{color:var(--cream);font-weight:700;font-size:13px}
   @media(max-width:860px){.hrlog .hrow{grid-template-columns:52px 1fr 104px;gap:10px}.hrlog .ldtrack{display:none}}
 
-  /* leaderboard */
   table{width:100%;border-collapse:collapse}
   thead th{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);text-align:right;padding:0 0 16px;border-bottom:1px solid var(--line);font-weight:500}
   thead th.l{text-align:left}
@@ -226,23 +186,22 @@
   tbody tr{transition:background .25s}
   tbody tr:hover{background:rgba(232,99,44,.04)}
   tbody td.l{text-align:left}
-  .rk{font-weight:400;font-style:normal;font-size:clamp(24px,2.6vw,34px);color:var(--clay);font-family:'Instrument Serif',serif;letter-spacing:-.03em;padding-right:18px!important;width:64px}
+  .rk{font-family:'Instrument Serif',serif;font-size:clamp(24px,2.6vw,34px);color:var(--clay);letter-spacing:-.03em;padding-right:18px!important;width:64px}
   td.nm-c{font-weight:600;font-size:15.5px;color:var(--cream);letter-spacing:-.01em}
   td.nm-c small{display:block;font-weight:400;color:var(--muted);font-size:10px;font-family:'JetBrains Mono',monospace;margin-top:4px;letter-spacing:.06em}
   tbody td b{color:var(--clay-soft);font-size:14px}
+  tr.israce td{background:rgba(255,209,102,.07)}
+  tr.israce .rk{color:var(--win)}
 
-  /* footer */
-  footer{margin-top:clamp(110px,16vh,200px);border-top:1px solid var(--line);padding:clamp(50px,8vh,90px) 0 60px;position:relative}
-  .endline{font-family:'Instrument Serif',serif;font-weight:400;font-style:normal;font-size:clamp(40px,7.5vw,100px);letter-spacing:-.04em;line-height:1.02;color:var(--cream)}
-  .endline b{color:var(--clay);font-weight:400}
+  footer{margin-top:clamp(110px,16vh,200px);border-top:1px solid var(--line);padding:clamp(50px,8vh,90px) 0 60px}
+  .endline{font-family:'Instrument Serif',serif;font-size:clamp(40px,7.5vw,100px);letter-spacing:-.04em;line-height:1.02;color:var(--cream)}
+  .endline b{color:var(--win);font-weight:400}
   .footmeta{margin-top:42px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
 
-  /* tooltip */
   .tip{position:fixed;z-index:90;pointer-events:none;opacity:0;transition:opacity .15s;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:10px 13px;font-family:'JetBrains Mono',monospace;font-size:10.5px;line-height:1.7;color:var(--cream-dim);max-width:260px;box-shadow:0 12px 34px rgba(0,0,0,.5)}
   .tip b{color:var(--cream)}
   .tip .tcol{color:var(--clay)}
 
-  /* reveals */
   .reveal{opacity:0;transform:translateY(34px);filter:blur(5px);transition:opacity 1s cubic-bezier(.16,.84,.26,1),transform 1s cubic-bezier(.16,.84,.26,1),filter 1s}
   .reveal.in{opacity:1;transform:none;filter:none}
   .hero .hr0{opacity:0;transform:translateY(26px);animation:rise 1.1s cubic-bezier(.16,.84,.26,1) forwards}
@@ -275,189 +234,145 @@
 <div class="vignette"></div>
 <div class="grain"></div>
 <div class="tip" id="tip"></div>
-
 <nav class="sidenav" id="sidenav" aria-label="Sections"></nav>
 
 <div class="wrap">
-
-  <!-- ============ HERO ============ -->
   <header class="hero" id="top">
     <div class="topbar hr0 d1">
-      <span>Trail Dossier <span class="dotsep">◆</span> Field Report</span>
+      <span>Trail Dossier <span class="dotsep">&#9670;</span> Race Report</span>
       <span>Kelly Hoffman <span class="dotsep">/</span> Seattle, WA</span>
     </div>
     <div class="hero-main">
-      <div class="kicker hr0 d2">Strava Telemetry · 2026 Year to Date</div>
-      <h1 class="hr0 d3">Trail <em>Dossier.</em></h1>
-      <p class="hero-sub hr0 d4">A race-prep field report: every ride, climb, and heartbeat on the road to the <b>Sturdy Dirty</b>. Expert course. Four timed stages. Home mountain.</p>
-      <div class="cdrow hr0 d5">
-        <div class="cdnum" id="cdays">·</div>
-        <div class="cdmeta">
-          <div class="l1">Days until race</div>
-          <div class="l2">Sturdy Dirty</div>
-          <div class="l3">SAT · JUL 18 2026 · TIGER MTN · EXPERT</div>
+      <div class="kicker hr0 d2">Sturdy Dirty 2026 &middot; Expert &middot; July 18</div>
+      <h1 class="hr0 d3">Race <em>Report.</em></h1>
+      <p class="hero-sub hr0 d4">Six years running this race. This one came after a vet emergency, a flat week, and a knee injury eight days out. She rested, showed up, and <b>set a personal record on all four stages.</b></p>
+      <div class="resultrow hr0 d5">
+        <div>
+          <div class="rnum a">8<sup>th</sup></div>
+        </div>
+        <div class="rmeta">
+          <div class="l1">Expert &middot; year six</div>
+          <div class="l2">Sturdy Dirty 2026</div>
+          <div class="l3">17.2 MI &middot; 3,508 FT &middot; 3H 22M MOVING</div>
+        </div>
+        <div>
+          <div class="rnum b">4/4</div>
+          <div class="l1" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.32em;color:var(--cream-dim);text-transform:uppercase;margin-top:10px">Stages PR'd</div>
         </div>
       </div>
     </div>
-    <div class="scrollcue">SCROLL</div>
-    <div class="marq" aria-hidden="true">
-      <div class="marq-in" id="marq"></div>
-    </div>
+    <div class="marq" aria-hidden="true"><div class="marq-in" id="marq"></div></div>
   </header>
 
-  <!-- ============ 01 THE BUILD ============ -->
-  <section class="sec reveal" id="s1" data-title="The Build">
+  <section class="sec reveal" id="s1" data-title="The Result">
     <div class="ghost">01</div>
     <div class="shead">
-      <div class="eyebrow">№ 01 · The Build</div>
-      <h2>Year to date, <em>by the numbers.</em></h2>
-      <div class="dek">Every mountain bike ride logged since January 1. The base is built. What's left is the sharpening.</div>
+      <div class="eyebrow">&#8470; 01 &middot; The Result</div>
+      <h2>Race day, <em>by the numbers.</em></h2>
+      <div class="dek">Saturday, July 18. Perfect weather, rode with Michelle B all day, and ran into a friend she had not seen since 2007. <b>45 personal records</b> set in a single day.</div>
     </div>
-    <div class="bigstats" id="stats"></div>
-    <div class="minis" id="minis"></div>
+    <div class="bigstats" id="racestats"></div>
+    <div class="minis" id="raceminis"></div>
   </section>
 
-  <!-- ============ 02 COURSE RECON ============ -->
-  <section class="sec reveal" id="s2" data-title="Course Recon">
+  <section class="sec reveal" id="s2" data-title="The Stages">
     <div class="ghost">02</div>
     <div class="shead">
-      <div class="eyebrow">№ 02 · Course Recon</div>
-      <h2>Know the <em>course.</em></h2>
-      <div class="dek">The Sturdy Dirty 2026 Expert loop, from the official Trailforks route: <b>16.2 miles, 3,418 ft of climbing</b>, two sustained ascents, four timed descents.</div>
+      <div class="eyebrow">&#8470; 02 &middot; The Stages</div>
+      <h2>Four stages. <em>Four records.</em></h2>
+      <div class="dek">Enduro only times the descents. Here is race day against her fastest training run on each stage, every one of them set during this build.</div>
     </div>
     <div class="panel">
-      <div class="coursestats" id="coursestats"></div>
-      <div id="profilechart" class="profilebox"></div>
-      <div class="pnote" style="margin:14px 0 0">▲ STAGE MARKERS APPROXIMATE, PLACED AT THE TOP OF EACH TIMED DESCENT. HIGH POINT 2,963 FT AT MILE ~5.8.</div>
+      <div class="ptitle">Race day vs training best <span class="tag win">4 of 4 improved</span></div>
+      <div class="pnote">TRAINING BESTS WERE HER QUICKEST CLEAN RUNS ON THE MATCHING STRAVA SEGMENT. RACE TIMES ARE FROM THE SAME SEGMENTS ON JULY 18.</div>
+      <div class="scomp" id="scomp"></div>
     </div>
-    <div class="stages" id="stages"></div>
-    <div class="insight">
-      <div class="flag">▲ How it stacks against your training</div>
-      <h3>The climbiest-per-mile day <em>you ride.</em></h3>
-      <p>At <b>211 ft of climbing per mile</b>, Sturdy Dirty packs in more vert per mile than your typical Tiger lap (~185 ft/mi) or even Dirty Bloom (~170 ft/mi), about <b>40% of Dirty Bloom's total climbing in a third of the distance</b>, roughly <b>two Tiger laps back-to-back</b> but punchier. Two sustained <b>1,000–1,500 ft climbs</b> with pitches hitting <b>~14%</b>. Train it: climb-dense laps, Z5 efforts on the steep stuff, and dialed fueling for a 2.5–3.5 hr push.</p>
+    <div class="panel" style="margin-top:22px">
+      <div class="ptitle">Where the stages sit on the course</div>
+      <div class="pnote">16.2 MILE LOOP, 3,418 FT OF CLIMBING. EACH MARKER IS THE TOP OF A TIMED DESCENT. HIGH POINT 2,963 FT AT MILE 5.8.</div>
+      <div class="coursestats" id="coursestats"></div>
+      <div id="profilechart"></div>
+    </div>
+    <div class="insight win">
+      <div class="flag">&#9650; The headline</div>
+      <h3>Three minutes and 48 seconds <em>faster</em> than her own best.</h3>
+      <p>Add the four stages together and race day came in <b>3:48 quicker than the sum of her fastest training runs</b>. The biggest jumps came on the two longest stages: <b>Summit to Super-T dropped 1:45</b> and <b>NOTG from Drop In dropped 1:36</b>. Those are not taper gains, those are race-day gains, the difference between riding a trail and racing it.</p>
+      <p>The heart rate backs it up. She averaged <b>165 bpm across 3 hours 22 minutes</b> and peaked at <b>189</b>, one beat under the max we calibrated back in June. On the stages themselves she sat at <b>175 to 180 bpm</b>, deep in Zone 5. There was nothing left in the tank.</p>
     </div>
   </section>
 
-  <!-- ============ 03 ROAD TO RACE ============ -->
-  <section class="sec reveal" id="s3" data-title="Road to Race">
+  <section class="sec reveal" id="s3" data-title="The Road Here">
     <div class="ghost">03</div>
     <div class="shead">
-      <div class="eyebrow">№ 03 · Road to Race</div>
-      <h2>Peak, then <em>get fresh.</em></h2>
-      <div class="dek">A suggested six-week structure built off your data. The aerobic base is banked. The win now is <b>sharpening the top end and arriving rested</b>, not piling on volume. Peak week includes a 16-mi / 3,400-ft course simulation.</div>
+      <div class="eyebrow">&#8470; 03 &middot; The Road Here</div>
+      <h2>The work behind <em>the result.</em></h2>
+      <div class="dek">Fifty-five mountain bike rides this year before the start line, plus a season that refused to go to plan.</div>
     </div>
-    <div class="panel chartbox">
-      <div class="ptitle">Weekly target load <span class="tag" id="cd2">days out</span></div>
-      <div class="pnote">RELATIVE LOAD, 100 = BIGGEST WEEK. STRUCTURE, NOT GOSPEL.</div>
-      <div id="taperchart"></div>
-      <div class="phaserow" id="phaserow"></div>
+    <div class="bigstats" id="stats"></div>
+    <div class="panel" style="margin-top:30px">
+      <div class="ptitle">How the season actually went</div>
+      <div class="pnote">THE BUILD, THE SETBACKS, AND THE NIGHT BEFORE.</div>
+      <div class="tl" id="timeline"></div>
     </div>
-    <div class="panel" style="margin-top:18px">
-      <div class="ptitle">Race week <span class="tag">Jul 13 – Jul 18 · taper into race day</span></div>
-      <div class="pnote">A KNEE SCARE FORCED SIX DAYS OFF, WHICH IS JUST A LONGER TAPER. YOU ARRIVE FRESH, HEALTHY, AND RESTED, WITH FOUR STAGE PRS AND A RACE WIN ALREADY THIS SEASON. TODAY: A SHORT OPENER TO SHAKE OFF THE RUST AND TEST THE KNEE. TOMORROW: THE START LINE.</div>
-      <div class="weekplan">
-        <div class="wpday" style="--c:var(--sky)">
-          <div class="wpd-day">Mon<span>JUL 13</span></div>
-          <div class="wpd-tag">✓ swim</div>
-          <div class="wpd-desc">Light evening swim. Gentle cross-train while the knee settled.</div>
-        </div>
-        <div class="wpday" style="--c:var(--muted)">
-          <div class="wpd-day">Tue<span>JUL 14</span></div>
-          <div class="wpd-tag">✓ rest</div>
-          <div class="wpd-desc">Rest. Knee healing.</div>
-        </div>
-        <div class="wpday" style="--c:var(--muted)">
-          <div class="wpd-day">Wed<span>JUL 15</span></div>
-          <div class="wpd-tag">✓ rest</div>
-          <div class="wpd-desc">Rest. Knee healing.</div>
-        </div>
-        <div class="wpday" style="--c:var(--muted)">
-          <div class="wpd-day">Thu<span>JUL 16</span></div>
-          <div class="wpd-tag">✓ rest</div>
-          <div class="wpd-desc">Rest. Knee healing.</div>
-        </div>
-        <div class="wpday" style="--c:var(--ochre)">
-          <div class="wpd-day">Fri<span>JUL 17</span></div>
-          <div class="wpd-tag">opener · today</div>
-          <div class="wpd-desc">Short easy spin to shake off the rust and test the knee. A couple of light pickups only if it's pain-free. Then prep the bike, gear, and race fuel.</div>
-        </div>
-        <div class="wpday" style="--c:var(--clay)">
-          <div class="wpd-day">Sat<span>JUL 18</span></div>
-          <div class="wpd-tag">🏁 race day</div>
-          <div class="wpd-desc"><b>Sturdy Dirty, Expert.</b> 16.2 mi, 4 timed stages. Fresh legs, four stage PRs in the bank. Ride your race, ride it smart.</div>
-        </div>
-        <div class="wpday" style="--c:var(--muted)">
-          <div class="wpd-day">Sun<span>JUL 19</span></div>
-          <div class="wpd-tag">recover</div>
-          <div class="wpd-desc">Recover and celebrate. You earned it.</div>
-        </div>
-      </div>
+    <div class="insight win">
+      <div class="flag">&#9670; The one that mattered</div>
+      <h3>She went back for <em>the chute.</em></h3>
+      <p>On July 6, on a double black called Lower Predator, a steep chute got in her head and she walked it. It stung. Two weeks of a vet emergency, a low week, and a knee injury followed.</p>
+      <p>Then on <b>July 17, the evening before the race</b>, she drove back to that exact chute. She worked it for <b>over an hour</b>, nearly failed again, and then rode it clean. <b>Then she rode it three more times.</b></p>
+      <p>The next morning she set a personal record on all four stages, including a <b>21 second improvement on Lower Predator</b>, the very trail that had beaten her. Fitness was never the question in this build. That was.</p>
     </div>
   </section>
 
-  <!-- ============ 04 BUILD LOG ============ -->
   <section class="sec reveal" id="s4" data-title="Build Log">
     <div class="ghost">04</div>
     <div class="shead">
-      <div class="eyebrow">№ 04 · The Build Log</div>
+      <div class="eyebrow">&#8470; 04 &middot; The Build Log</div>
       <h2>Measured, not <em>estimated.</em></h2>
-      <div class="dek">Your last 12 key rides with <b>real heart rate from the strap</b>, not Strava's guess. Bar length = HR load (minutes × intensity). Zones on the new max-HR-190 scale.</div>
+      <div class="dek">The last 12 key rides with <b>real heart rate from the strap</b>. Bar length is HR load, minutes multiplied by intensity. Zones on the 190 max scale.</div>
     </div>
-    <div class="panel">
-      <div class="hrlog" id="hrlog"></div>
-      <div class="insight ochre" style="margin-top:30px">
-        <div class="flag">◎ Pattern worth a tweak</div>
-        <h3>You live in <em>Zone 4.</em></h3>
-        <p>Nearly every recent ride averages <b>149–164 bpm, solid Zone 4</b>, the "always moderately hard" gray zone. The engine is clearly there. Race-day gains now come from <b>polarizing</b>: make easy days genuinely easy (Z1–2, spin the SOMA) so you actually recover, and add <b>short Z5 intervals and sprint repeats</b> on Tiger to sharpen the top end. That, plus skills and course recon, beats more Z4 grind.</p>
-      </div>
-    </div>
+    <div class="panel"><div class="hrlog" id="hrlog"></div></div>
   </section>
 
-  <!-- ============ 05 RIDE BY RIDE ============ -->
-  <section class="sec reveal" id="s6" data-title="Ride by Ride">
+  <section class="sec reveal" id="s5" data-title="Every Ride">
     <div class="ghost">05</div>
     <div class="shead">
-      <div class="eyebrow">№ 05 · Ride by Ride</div>
+      <div class="eyebrow">&#8470; 05 &middot; Every Ride</div>
       <h2>Every ride this year, <em>by effort.</em></h2>
-      <div class="dek">Each bar is one MTB ride this year, colored by trail system. The Sedona block, the Dirty Bloom monolith, the June ramp back onto Tiger. Hover for detail.</div>
+      <div class="dek">Each bar is one mountain bike ride, colored by trail system. The Sedona block, the Dirty Bloom monolith, the Free for All win, and the race itself at the far right. Hover for detail.</div>
     </div>
-    <div class="panel chartbox">
-      <div id="rampchart"></div>
-    </div>
+    <div class="panel chartbox"><div id="rampchart"></div></div>
   </section>
 
-  <!-- ============ 06 HALL OF DIRT ============ -->
-  <section class="sec reveal" id="s7" data-title="Hall of Dirt">
+  <section class="sec reveal" id="s6" data-title="Hall of Dirt">
     <div class="ghost">06</div>
     <div class="shead">
-      <div class="eyebrow">№ 06 · Hall of Dirt</div>
+      <div class="eyebrow">&#8470; 06 &middot; Hall of Dirt</div>
       <h2>The biggest <em>days.</em></h2>
-      <div class="dek">Year-to-date MTB rides ranked by relative effort.</div>
+      <div class="dek">Mountain bike rides this year ranked by relative effort. Race day lands second, behind only the 50 mile Dirty Bloom that built the engine.</div>
     </div>
     <div class="panel" style="padding-top:34px">
       <table>
-        <thead><tr>
-          <th class="l"></th><th class="l">Ride</th><th>Dist</th><th>Climb</th><th>Time</th><th>Effort</th>
-        </tr></thead>
+        <thead><tr><th class="l"></th><th class="l">Ride</th><th>Dist</th><th>Climb</th><th>Time</th><th>Effort</th></tr></thead>
         <tbody id="board"></tbody>
       </table>
     </div>
   </section>
 
   <footer class="reveal">
-    <div class="endline">See you at the <b>start line.</b></div>
+    <div class="endline">Six years. <b>Best one yet.</b></div>
     <div class="footmeta">
-      <span>Kelly Hoffman · <span id="ridecount">·</span> MTB rides · YTD 2026</span>
-      <span>Data: Strava · Course: Trailforks · Updated Jul 17 2026</span>
-      <span>⛰ Ride on</span>
+      <span>Kelly Hoffman &middot; <span id="ridecount">&middot;</span> MTB rides &middot; YTD 2026</span>
+      <span>Data: Strava &middot; Course: Trailforks &middot; Sturdy Dirty, Jul 18 2026</span>
+      <span>&#9968; Ride on</span>
     </div>
   </footer>
 </div>
 
 <script>
-/* ================= DATA · MTB rides, 2026 YTD ================= */
 const R = [
- {d:"2026-07-10",n:"Friday Ferdinand",r:"Raging River",dist:10243.2,mt:3859,el:371.9,re:234,cal:430,pr:9,ms:10,ahr:167,mhr:181},
+ {d:"2026-07-18",n:"Sturdy 2026!",r:"Race · Sturdy Dirty",dist:27634.8,mt:12138,el:1069.2,re:700,cal:1312,pr:45,ms:11.2,ahr:165,mhr:189},
+ {d:"2026-07-17",n:"♢♢ Lower Pred sesh",r:"Tiger",dist:4562.2,mt:2726,el:150.4,re:130,cal:231,pr:0,ms:9.1},
+{d:"2026-07-10",n:"Friday Ferdinand",r:"Raging River",dist:10243.2,mt:3859,el:371.9,re:234,cal:430,pr:9,ms:10,ahr:167,mhr:181},
  {d:"2026-07-08",n:"Forgot shoes 😭",r:"Grand Ridge",dist:6778.4,mt:2674,el:178.4,re:52,cal:246,pr:2,ms:7.54,ahr:137,mhr:161},
  {d:"2026-07-06",n:"Lower Pred",r:"Tiger",dist:7097.3,mt:4053,el:174.3,re:86,cal:385,pr:0,ms:8.54,ahr:136,mhr:167},
  {d:"2026-07-05",n:"Choose your own adventure",r:"Tiger",dist:17451.5,mt:7400,el:639.7,re:436,cal:792,pr:6,ms:9.06,ahr:166,mhr:182},
@@ -511,78 +426,82 @@ const R = [
  {d:"2026-01-18",n:"☀️ enduro repeats",r:"Raging River",dist:16884.5,mt:6497,el:499.5,re:425,cal:637,pr:9,ms:9.42},
  {d:"2026-01-14",n:"like-new",r:"Tiger",dist:6639.1,mt:3177,el:240.5,re:119,cal:299,pr:0,ms:9.88}
 ];
+const REGION_HEX={"Race · Sturdy Dirty":"#ffd166","Tiger":"#e8632c","Raging River":"#5aa899","Grand Ridge":"#94a44e","Olallie":"#5c7d86","Sedona":"#b1442e","Race · Wenatchee":"#e8b54a","Race · Free for All":"#d4566b","Other":"#7c715a"};
 
-const REGION_COLOR={"Tiger":"var(--clay)","Raging River":"#5aa899","Grand Ridge":"var(--moss)","Olallie":"var(--slate)","Sedona":"var(--rust)","Race · Wenatchee":"var(--gold)","Race · Free for All":"#d4566b","Other":"var(--muted)"};
-const REGION_HEX={"Tiger":"#e8632c","Raging River":"#5aa899","Grand Ridge":"#94a44e","Olallie":"#5c7d86","Sedona":"#b1442e","Race · Wenatchee":"#e8b54a","Race · Free for All":"#d4566b","Other":"#7c715a"};
-
-/* course (Trailforks-stated) + profile from GPX */
-const COURSE={dist:16.2,gain:3418,loss:3415,high:2963,low:1432,perMi:211,steep:14};
+const RACE={dist:27634.8,el:1069.2,mt:12138,el_t:17710,cal:1312,re:700,pr:45,ahr:165,mhr:189,place:"8th",field:"Expert"};
 const STAGES=[
- {n:1,name:"Lower Predator",seg:"Lower Predator",sid:10476241,mi:0.40,time:"2:35",hr:172,note:"new PR 6/10 · lapped it 3×",col:"#e8632c",cmi:1.10},
- {n:2,name:"Summit · Close Encounters → ET / Super-T",seg:"Close Encounters → Super-T",sid:32117465,mi:1.24,time:"8:51",hr:160,note:"full top run (CE→ET→Super-T) 17:13 on 6/8",col:"#e0a13c",cmi:5.81},
- {n:3,name:"NOTG from Drop In",seg:"Drop In + NOTG",sid:21687522,mi:1.06,time:"8:14",hr:173,note:"new PR 6/12 (clean run)",col:"#94a44e",cmi:11.45},
- {n:4,name:"Atlas",seg:"Atlas Shrugged",sid:31953601,mi:0.58,time:"3:30",hr:163,note:"new PR 7/1",col:"#5c7d86",cmi:13.63}
+ {n:1,name:"Lower Predator",seg:"Lower Predator",sid:10476241,best:"2:35",race:"2:14",delta:"-21s",hr:175,col:"#e8632c",cmi:1.10},
+ {n:2,name:"Summit to Close Encounters, ET / Super-T",seg:"Close Encounters → Super-T",sid:32117465,best:"8:51",race:"7:06",delta:"-1:45",hr:179,col:"#e0a13c",cmi:5.81},
+ {n:3,name:"NOTG from Drop In",seg:"Drop In + NOTG",sid:21687522,best:"8:14",race:"6:38",delta:"-1:36",hr:176,col:"#94a44e",cmi:11.45},
+ {n:4,name:"Atlas",seg:"Atlas Shrugged",sid:31953601,best:"3:30",race:"3:24",delta:"-6s",hr:176,col:"#5c7d86",cmi:13.63}
+];
+const TIMELINE=[
+ {d:"JAN",t:"Sedona block",x:"Nine rides in nine days on red rock. The winter base, laid a long way from Tiger Mountain.",c:"#b1442e"},
+ {d:"MAY 2",t:"Dirty Bloom 50",x:"<b>50.8 miles, 8,611 feet, 8 hours 28 minutes.</b> Average heart rate 164 the whole day. The ride that built the engine.",c:"#e8b54a"},
+ {d:"JUN 8",t:"First look at the course",x:"Rode Stage 2 and Stage 4 for the first time. Close Encounters, rough cut and fun.",c:"#e8632c"},
+ {d:"JUN 24",t:"Free for All, 1st in Sport",x:"A tune-up enduro, won it. Three laps, faster every time, in serious heat. Max heart rate 191.",c:"#d4566b"},
+ {d:"JUL 3",t:"Emergency vet, twice",x:"The dog got sick over the holiday weekend. She is fine now. The planned course simulation never happened.",c:"#7c715a"},
+ {d:"JUL 6",t:"The chute wins",x:"Got in her head on a double black and walked a steep chute. The low point of the build.",c:"#7c715a"},
+ {d:"JUL 7",t:"A flat week",x:"Not in the mindset to ride. She rested instead of forcing it, which turned out to be the right call.",c:"#7c715a"},
+ {d:"JUL 11",t:"Knee injury",x:"Six days completely off the bike, eight days before the race. Effectively a longer taper.",c:"#7c715a"},
+ {d:"JUL 17",t:"She goes back for the chute",x:"Over an hour of trying. Cleaned it. <b>Then rode it three more times.</b> Ready to race.",c:"#ffd166"},
+ {d:"JUL 18",t:"Sturdy Dirty, 8th in Expert",x:"<b>Personal record on all four stages.</b> 45 PRs in one day. 3:48 faster than her own best.",c:"#ffd166"}
 ];
 const PROFILE=[[0,1444],[0.07,1461],[0.22,1432],[0.36,1456],[0.44,1447],[0.51,1447],[0.76,1587],[1.10,1726],[1.24,1700],[1.32,1640],[1.41,1594],[1.47,1540],[1.56,1484],[1.64,1459],[1.70,1456],[1.86,1443],[1.98,1453],[2.02,1482],[2.07,1499],[2.13,1528],[2.19,1554],[2.26,1595],[2.29,1634],[2.34,1665],[2.39,1694],[2.46,1721],[2.54,1743],[2.62,1769],[2.74,1817],[2.84,1882],[3.01,1924],[3.10,1954],[3.15,1988],[3.22,2030],[3.27,2046],[3.33,2088],[3.41,2138],[3.52,2095],[3.57,2126],[3.65,2170],[3.71,2188],[3.79,2218],[3.85,2248],[3.92,2284],[4.01,2314],[4.08,2349],[4.17,2365],[4.25,2397],[4.30,2411],[4.35,2433],[4.45,2438],[4.51,2456],[4.57,2487],[4.64,2526],[4.68,2559],[4.74,2566],[4.81,2584],[4.87,2597],[4.94,2620],[5.05,2677],[5.17,2635],[5.54,2762],[5.81,2946],[5.96,2944],[6.02,2902],[6.07,2924],[6.16,2887],[6.26,2866],[6.31,2848],[6.41,2819],[6.46,2813],[6.54,2799],[6.61,2773],[6.65,2720],[6.69,2655],[6.76,2567],[6.83,2462],[6.91,2417],[6.98,2354],[7.07,2266],[7.19,2154],[7.36,1994],[7.52,1894],[7.60,1832],[7.73,1744],[7.82,1659],[7.94,1584],[8.28,1503],[8.70,1469],[8.87,1496],[9.08,1597],[9.31,1737],[9.44,1790],[9.56,1837],[9.71,1854],[9.90,1908],[10.15,1958],[10.29,2011],[10.43,2103],[10.62,2224],[10.84,2321],[10.95,2385],[11.07,2458],[11.25,2604],[11.32,2634],[11.45,2677],[11.53,2643],[11.60,2607],[11.72,2583],[11.84,2531],[11.89,2494],[11.98,2395],[12.04,2326],[12.21,2222],[12.30,2201],[12.39,2119],[12.57,2023],[12.66,1979],[12.79,1998],[12.85,2037],[12.95,2081],[13.05,2065],[13.09,2099],[13.20,2134],[13.63,2170],[13.74,2126],[13.81,2113],[13.88,2106],[14.02,2041],[14.16,1933],[14.24,1854],[14.31,1801],[14.35,1740],[14.40,1706],[14.53,1620],[14.59,1561],[14.68,1504],[14.76,1471],[14.96,1459],[15.04,1482],[15.10,1468],[15.18,1448],[15.32,1443],[15.49,1456],[15.56,1448],[15.71,1447],[15.82,1447],[15.89,1456],[16.03,1432],[16.18,1461],[16.25,1444]];
 
-/* helpers */
 const MI=m=>m*0.000621371, FT=m=>m*3.28084, H=s=>s/3600;
 const fmt=(n,d=0)=>n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const hms=s=>{const h=Math.floor(s/3600),m=Math.round((s-h*3600)/60);return h+"h "+String(m).padStart(2,'0')+"m";};
 
-/* ================= MARQUEE ================= */
 (function(){
-  const items="STURDY DIRTY · JUL 18 2026&nbsp;&nbsp;<b>◆</b>&nbsp;&nbsp;16.2 MILES&nbsp;&nbsp;<b>◆</b>&nbsp;&nbsp;3,418 FT OF CLIMB&nbsp;&nbsp;<b>◆</b>&nbsp;&nbsp;4 TIMED STAGES&nbsp;&nbsp;<b>◆</b>&nbsp;&nbsp;TIGER MOUNTAIN&nbsp;&nbsp;<b>◆</b>&nbsp;&nbsp;EXPERT COURSE&nbsp;&nbsp;<b>◆</b>&nbsp;&nbsp;";
+  const items="STURDY DIRTY 2026 &nbsp;&nbsp;<b>&#9670;</b>&nbsp;&nbsp; 8TH IN EXPERT &nbsp;&nbsp;<b>&#9670;</b>&nbsp;&nbsp; 4 OF 4 STAGES PR'D &nbsp;&nbsp;<b>&#9670;</b>&nbsp;&nbsp; 45 PERSONAL RECORDS &nbsp;&nbsp;<b>&#9670;</b>&nbsp;&nbsp; 3:48 FASTER &nbsp;&nbsp;<b>&#9670;</b>&nbsp;&nbsp; YEAR SIX &nbsp;&nbsp;<b>&#9670;</b>&nbsp;&nbsp; ";
   document.getElementById('marq').innerHTML=`<span>${items.repeat(3)}</span><span>${items.repeat(3)}</span>`;
 })();
 
-/* ================= COUNTDOWN ================= */
+/* 01 race stats */
 (function(){
-  const race=new Date(2026,6,18);
-  const days=Math.max(0,Math.ceil((race-new Date())/86400000));
-  document.getElementById('cdays').textContent=days;
-  const b=document.getElementById('cd2'); if(b)b.textContent=days+" days out";
-})();
-
-/* ================= 01 STATS ================= */
-const T={n:R.length,dist:0,el:0,mt:0,cal:0,re:0,pr:0};
-R.forEach(x=>{T.dist+=x.dist;T.el+=x.el;T.mt+=x.mt;T.cal+=x.cal;T.re+=x.re;T.pr+=x.pr;});
-(function(){
-  const everest=FT(T.el)/29032;
-  document.getElementById('stats').innerHTML=[
-   {l:"MTB Rides",num:T.n,dec:0,u:"",foot:"year to date · 2026"},
-   {l:"Distance",num:MI(T.dist),dec:0,u:"mi",foot:"on dirt"},
-   {l:"Climbing",num:FT(T.el),dec:0,u:"ft",foot:`≈ ${everest.toFixed(1)}× Everest`},
-   {l:"Saddle Time",num:H(T.mt),dec:0,u:"hrs",foot:`${fmt(T.cal)} kcal burned`}
-  ].map(s=>`<div class="bstat">
-    <div class="lab">${s.l}</div>
+  document.getElementById('racestats').innerHTML=[
+   {l:"Finish",num:8,dec:0,u:"th",foot:"Expert field"},
+   {l:"Distance",num:MI(RACE.dist),dec:1,u:"mi",foot:"one lap of the course"},
+   {l:"Climbing",num:FT(RACE.el),dec:0,u:"ft",foot:"3h 22m moving"},
+   {l:"PRs Set",num:RACE.pr,dec:0,u:"",foot:"in a single day"}
+  ].map(s=>`<div class="bstat"><div class="lab">${s.l}</div>
     <div class="num"><span data-num="${s.num}" data-dec="${s.dec}">0</span><span class="unit">${s.u}</span></div>
     <div class="foot">${s.foot}</div></div>`).join('');
-  const longest=R.reduce((a,b)=>b.dist>a.dist?b:a);
-  const biggest=R.reduce((a,b)=>b.el>a.el?b:a);
-  const hardest=R.reduce((a,b)=>b.re>a.re?b:a);
-  document.getElementById('minis').innerHTML=[
-   {l:"Longest ride",v:`${fmt(MI(longest.dist),1)}<span>mi</span>`,s:longest.n},
-   {l:"Biggest single climb",v:`${fmt(FT(biggest.el))}<span>ft</span>`,s:biggest.n},
-   {l:"Hardest effort",v:`${hardest.re}<span>RE</span>`,s:hardest.n},
-   {l:"PRs collected",v:`${fmt(T.pr)}<span>🏆</span>`,s:"segment records, MTB only"}
+  document.getElementById('raceminis').innerHTML=[
+   {l:"Avg heart rate",v:`165<span>bpm</span>`,s:"across 3h 22m"},
+   {l:"Peak heart rate",v:`189<span>bpm</span>`,s:"one under her max"},
+   {l:"Relative effort",v:`700`,s:"2nd hardest day of 2026"},
+   {l:"Total stage time",v:`19:22`,s:"four timed descents"}
   ].map(m=>`<div class="mini"><div class="l">${m.l}</div><div class="v">${m.v}</div><div class="s">${m.s}</div></div>`).join('');
-  document.getElementById('ridecount').textContent=T.n;
 })();
 
-/* ================= 02 COURSE ================= */
+/* 02 stage comparison */
+(function(){
+  document.getElementById('scomp').innerHTML=
+    `<div class="head"><div></div><div>Stage</div><div>Training best</div><div>Race day</div><div>Delta</div></div>`+
+    STAGES.map(s=>`<div class="srow" style="--c:${s.col}">
+      <div class="sn">${s.n}</div>
+      <div class="snm">${s.name}<small>${s.seg} &middot; ${s.hr} bpm avg on race day</small></div>
+      <div class="col"><div class="clab">Training</div><div class="cval">${s.best}</div></div>
+      <div class="col"><div class="clab">Race</div><div class="cval race">${s.race}</div></div>
+      <div class="delta">${s.delta}<small>FASTER</small></div>
+    </div>`).join('')+
+    `<div class="total"><span class="tl">Four stages combined</span>
+     <span class="tv">23:10 into <b>19:22</b></span></div>`;
+})();
+
+/* 02 course profile */
 (function(){
   document.getElementById('coursestats').innerHTML=[
    {l:"Distance",v:`16.2<span> mi</span>`},{l:"Climbing",v:`3,418<span> ft</span>`},
    {l:"Descent",v:`3,415<span> ft</span>`},{l:"High Point",v:`2,963<span> ft</span>`},
    {l:"Climb / mile",v:`211<span> ft</span>`},{l:"Steepest",v:`~14<span> %</span>`}
   ].map(c=>`<div class="cs"><div class="l">${c.l}</div><div class="v">${c.v}</div></div>`).join('');
-
   const P=PROFILE,W=1100,Hh=340,pad={l:46,r:16,t:40,b:36};
   const cw=W-pad.l-pad.r,ch=Hh-pad.t-pad.b;
-  const xs=P.map(p=>p[0]),ys=P.map(p=>p[1]);
-  const xmin=0,xmax=Math.max(...xs),ymin=1380,ymax=3050;
-  const X=v=>pad.l+(v-xmin)/(xmax-xmin)*cw;
-  const Y=v=>pad.t+ch-(v-ymin)/(ymax-ymin)*ch;
+  const xs=P.map(p=>p[0]),xmax=Math.max(...xs),ymin=1380,ymax=3050;
+  const X=v=>pad.l+(v-0)/(xmax-0)*cw, Y=v=>pad.t+ch-(v-ymin)/(ymax-ymin)*ch;
   const elevAt=mi=>{for(let i=1;i<P.length;i++){if(P[i][0]>=mi){const[a,b]=P[i-1],[c,d]=P[i];const t=(mi-a)/(c-a);return b+t*(d-b);}}return P[P.length-1][1];};
   let line=`M ${X(P[0][0])} ${Y(P[0][1])}`;
   P.slice(1).forEach(p=>line+=` L ${X(p[0])} ${Y(p[1])}`);
@@ -591,78 +510,52 @@ R.forEach(x=>{T.dist+=x.dist;T.el+=x.el;T.mt+=x.mt;T.cal+=x.cal;T.re+=x.re;T.pr+
   [1500,2000,2500,3000].forEach(e=>{const y=Y(e);grid+=`<line class="gridline" x1="${pad.l}" y1="${y}" x2="${W-pad.r}" y2="${y}"/>`;yax+=`<text class="axis" x="${pad.l-9}" y="${y+3}" text-anchor="end">${fmt(e)}</text>`;});
   let xax="";
   for(let m=0;m<=16;m+=4)xax+=`<text class="axis" x="${X(m)}" y="${Hh-12}" text-anchor="middle">MI ${m}</text>`;
-  /* stage markers on profile */
   let marks="";
   STAGES.forEach(s=>{const mx=X(s.cmi),my=Y(elevAt(s.cmi));
-    marks+=`<line x1="${mx}" y1="${my}" x2="${mx}" y2="${my-26}" stroke="${s.col}" stroke-width="1" opacity=".7"/>
+    marks+=`<line x1="${mx}" y1="${my}" x2="${mx}" y2="${my-30}" stroke="${s.col}" stroke-width="1" opacity=".7"/>
     <circle cx="${mx}" cy="${my}" r="4.5" fill="${s.col}" stroke="#0d0a07" stroke-width="2"/>
-    <text x="${mx}" y="${my-33}" text-anchor="middle" class="barlabel" style="fill:${s.col};font-weight:700;font-size:11px">S${s.n}</text>`;});
+    <text x="${mx}" y="${my-48}" text-anchor="middle" class="barlabel" style="fill:${s.col};font-weight:700;font-size:11px">S${s.n}</text>
+    <text x="${mx}" y="${my-36}" text-anchor="middle" class="barlabel" style="fill:${s.col};font-weight:700;font-size:10px">${s.race}</text>`;});
   const hx=X(5.81),hy=Y(2946);
-  const hilab=`<text class="barlabel" x="${hx-12}" y="${hy-8}" text-anchor="end" style="fill:var(--clay-soft);font-weight:700">▲ 2,963 FT</text>`;
+  const hilab=`<text class="barlabel" x="${hx-12}" y="${hy-8}" text-anchor="end" style="fill:var(--clay-soft);font-weight:700">&#9650; 2,963 FT</text>`;
   document.getElementById('profilechart').innerHTML=
    `<svg class="chart" viewBox="0 0 ${W} ${Hh}">
      <defs><linearGradient id="eg" x1="0" y1="0" x2="0" y2="1">
-       <stop offset="0%" stop-color="#e8632c" stop-opacity=".34"/>
-       <stop offset="100%" stop-color="#e8632c" stop-opacity="0"/>
+       <stop offset="0%" stop-color="#e8632c" stop-opacity=".34"/><stop offset="100%" stop-color="#e8632c" stop-opacity="0"/>
      </linearGradient></defs>
-     ${grid}${yax}
-     <path class="parea" d="${area}" fill="url(#eg)" style="opacity:0;transition:opacity 1.4s ease .9s"/>
+     ${grid}${yax}<path class="parea" d="${area}" fill="url(#eg)" style="opacity:0;transition:opacity 1.4s ease .9s"/>
      <path class="pline" d="${line}" fill="none" stroke="var(--clay)" stroke-width="2.4" stroke-linejoin="round"/>
-     <g class="pmarks" style="opacity:0;transition:opacity .9s ease 1.6s">${marks}${hilab}</g>
-     ${xax}</svg>`;
-  /* line-draw setup */
-  const pl=document.querySelector('#profilechart .pline');
-  const L=pl.getTotalLength();
+     <g class="pmarks" style="opacity:0;transition:opacity .9s ease 1.6s">${marks}${hilab}</g>${xax}</svg>`;
+  const pl=document.querySelector('#profilechart .pline'), L=pl.getTotalLength();
   pl.style.strokeDasharray=L; pl.style.strokeDashoffset=L;
   pl.style.transition="stroke-dashoffset 2.4s cubic-bezier(.3,.6,.3,1)";
   window.__drawProfile=()=>{pl.style.strokeDashoffset=0;
     document.querySelector('#profilechart .parea').style.opacity=1;
     document.querySelector('#profilechart .pmarks').style.opacity=1;};
-
-  /* stage cards */
-  document.getElementById('stages').innerHTML=STAGES.map(s=>`
-    <div class="stagecard">
-      <div class="bignum">${s.n}</div>
-      <div class="sn">STAGE 0${s.n}</div>
-      <div class="snm">${s.name}</div>
-      <div class="sseg">⌁ ${s.seg} · ${s.mi.toFixed(2)} MI</div>
-      <div class="stime">${s.time}</div>
-      <div class="shr">BEST · ${s.hr} BPM AVG</div>
-      <div class="smeta">${s.note}</div>
-      <a class="seglink" href="https://www.strava.com/segments/${s.sid}" target="_blank" rel="noopener">leaderboard</a>
-    </div>`).join('');
 })();
 
-/* ================= 03 TAPER ================= */
+/* 03 season totals + timeline */
+const T={n:R.length,dist:0,el:0,mt:0,cal:0,re:0,pr:0};
+R.forEach(x=>{T.dist+=x.dist;T.el+=x.el;T.mt+=x.mt;T.cal+=x.cal;T.re+=x.re;T.pr+=x.pr;});
 (function(){
-  const WK=[
-   {w:"JUN 9–14",load:75,phase:"BUILD",note:"base built"},
-   {w:"JUN 15–21",load:88,phase:"BUILD",note:"+ Z5 intervals"},
-   {w:"JUN 22–28",load:100,phase:"PEAK",note:"course sim 16mi/3.4k"},
-   {w:"JUN 29–JUL 5",load:90,phase:"PEAK",note:"race-pace efforts"},
-   {w:"JUL 6–12",load:62,phase:"SHARPEN",note:"cut volume, keep snap"},
-   {w:"JUL 13–18",load:38,phase:"TAPER",race:true,note:"fresh legs · recon"}
-  ];
-  const PC={BUILD:'#94a44e',PEAK:'#e8632c',SHARPEN:'#e0a13c',TAPER:'#5c7d86'};
-  const PHASE_NOTE={BUILD:"keep volume high, sprinkle in top-end",PEAK:"max load: longest Tiger laps + race-pace stage efforts",SHARPEN:"volume down ~35%, intensity stays sharp",TAPER:"volume way down, legs fresh, ride the course"};
-  const W=1100,Hh=330,pad={l:10,r:10,t:52,b:58};
-  const cw=W-pad.l-pad.r,ch=Hh-pad.t-pad.b,bw=cw/WK.length;
-  let bars="",grid="";
-  for(let g=0;g<=4;g++){const y=pad.t+ch-(g/4)*ch;grid+=`<line class="gridline" x1="${pad.l}" y1="${y}" x2="${W-pad.r}" y2="${y}"/>`;}
-  WK.forEach((k,i)=>{
-    const x=pad.l+i*bw,h=(k.load/100)*ch,col=PC[k.phase];
-    bars+=`<rect class="bar" style="transition-delay:${i*90}ms" x="${x+bw*0.16}" y="${pad.t+ch-h}" width="${bw*0.68}" height="${h}" rx="4" fill="${col}" opacity="${k.race?1:.9}"/>`;
-    bars+=`<text class="barlabel" x="${x+bw/2}" y="${pad.t+ch-h-10}" text-anchor="middle" style="fill:${col};font-weight:700;font-size:11px;letter-spacing:.14em">${k.phase}</text>`;
-    bars+=`<text class="axis" x="${x+bw/2}" y="${Hh-36}" text-anchor="middle" style="fill:var(--cream-dim)">${k.w}</text>`;
-    bars+=`<text class="axis" x="${x+bw/2}" y="${Hh-19}" text-anchor="middle">${k.note}</text>`;
-    if(k.here)bars+=`<text x="${x+bw/2}" y="24" text-anchor="middle" class="barlabel" style="fill:var(--cream);font-weight:700;letter-spacing:.18em">▾ YOU ARE HERE</text>`;
-    if(k.race)bars+=`<text x="${x+bw/2}" y="24" text-anchor="middle" class="barlabel" style="fill:var(--clay-soft);font-weight:700;letter-spacing:.14em">🏁 RACE · JUL 18</text>`;
-  });
-  document.getElementById('taperchart').innerHTML=`<svg class="chart" viewBox="0 0 ${W} ${Hh}">${grid}${bars}</svg>`;
-  document.getElementById('phaserow').innerHTML=Object.keys(PC).map(p=>`<div class="phasepill"><span class="pp-t" style="color:${PC[p]}">${p}</span><span class="pp-d">${PHASE_NOTE[p]}</span></div>`).join('');
+  const everest=FT(T.el)/29032;
+  document.getElementById('stats').innerHTML=[
+   {l:"MTB Rides",num:T.n,dec:0,u:"",foot:"year to date 2026"},
+   {l:"Distance",num:MI(T.dist),dec:0,u:"mi",foot:"on dirt"},
+   {l:"Climbing",num:FT(T.el),dec:0,u:"ft",foot:`about ${everest.toFixed(1)} times Everest`},
+   {l:"Saddle Time",num:H(T.mt),dec:0,u:"hrs",foot:`${fmt(T.pr)} PRs collected`}
+  ].map(s=>`<div class="bstat"><div class="lab">${s.l}</div>
+    <div class="num"><span data-num="${s.num}" data-dec="${s.dec}">0</span><span class="unit">${s.u}</span></div>
+    <div class="foot">${s.foot}</div></div>`).join('');
+  document.getElementById('timeline').innerHTML=TIMELINE.map(e=>`
+    <div class="tlrow" style="--c:${e.c}">
+      <div class="tld">${e.d}</div>
+      <div><div class="tlt">${e.t}</div><div class="tlx">${e.x}</div></div>
+    </div>`).join('');
+  document.getElementById('ridecount').textContent=T.n;
 })();
 
-/* ================= 04 HR LOG ================= */
+/* 04 HR log */
 (function(){
   const zoneOf=hr=>hr<114?1:hr<134?2:hr<153?3:hr<172?4:5;
   const ZCOL={1:'#5c7d86',2:'#7fa6b0',3:'#94a44e',4:'#e0a13c',5:'#e8632c'};
@@ -675,13 +568,10 @@ R.forEach(x=>{T.dist+=x.dist;T.el+=x.el;T.mt+=x.mt;T.cal+=x.cal;T.re+=x.re;T.pr+
       <div class="dt">${x.d.slice(5).replace("-","·")}</div>
       <div class="nm2"><span class="dot" style="background:${col}"></span>${x.n}&nbsp;<span class="ztag" style="border-color:${col};color:${col}">Z${z}</span></div>
       <div class="ldtrack"><div class="ldfill" style="background:${col};transition-delay:${i*60}ms" data-w="${(loads[i]/maxL*100).toFixed(0)}%"></div></div>
-      <div class="hrv"><b>${x.ahr}</b> avg · ${x.mhr} max</div>
-    </div>`;
-  }).join('');
+      <div class="hrv"><b>${x.ahr}</b> avg &middot; ${x.mhr} max</div></div>`;}).join('');
 })();
 
-
-/* ================= 06 RIDE BY RIDE ================= */
+/* 05 ride by ride */
 (function(){
   const rides=R.slice().reverse();
   const W=1100,Hh=320,pad={l:10,r:10,t:36,b:54};
@@ -690,93 +580,74 @@ R.forEach(x=>{T.dist+=x.dist;T.el+=x.el;T.mt+=x.mt;T.cal+=x.cal;T.re+=x.re;T.pr+
   const bw=cw/rides.length;
   let bars="";
   rides.forEach((x,i)=>{
-    const bx=pad.l+i*bw;
-    const h=Math.max((x.re/maxRE)*ch,2.5);
-    const col=REGION_HEX[x.r]||"#e8632c";
-    bars+=`<rect class="bar" style="transition-delay:${i*22}ms" x="${bx+bw*0.14}" y="${pad.t+ch-h}" width="${bw*0.72}" height="${h}" rx="2" fill="${col}" data-tip="<b>${x.n}</b><br>${x.d} · ${x.r}<br><span class='tcol'>${x.re} RE</span> · ${fmt(MI(x.dist),1)} mi · ${fmt(FT(x.el))} ft"/>`;
-  });
-  const dbi=rides.findIndex(x=>x.n==="Dirty Bloom 50");
+    const bx=pad.l+i*bw, h=Math.max((x.re/maxRE)*ch,2.5), col=REGION_HEX[x.r]||"#e8632c";
+    bars+=`<rect class="bar" style="transition-delay:${i*20}ms" x="${bx+bw*0.14}" y="${pad.t+ch-h}" width="${bw*0.72}" height="${h}" rx="2" fill="${col}" data-tip="<b>${x.n}</b><br>${x.d} &middot; ${x.r}<br><span class='tcol'>${x.re} RE</span> &middot; ${fmt(MI(x.dist),1)} mi &middot; ${fmt(FT(x.el))} ft"/>`;});
   let anno="";
-  if(dbi>=0){const ax=pad.l+dbi*bw+bw/2;
-    anno=`<line x1="${ax}" y1="${pad.t-4}" x2="${ax}" y2="${pad.t+ch}" stroke="var(--gold)" stroke-width="1" stroke-dasharray="2 4" opacity=".7"/>
-    <text x="${ax}" y="${pad.t-12}" text-anchor="middle" class="barlabel" style="fill:var(--gold);font-weight:700;letter-spacing:.12em">DIRTY BLOOM ▲ 1724</text>`;}
-  const ffi=rides.findIndex(x=>x.n.indexOf("Free for All")===0);
-  if(ffi>=0){const fx=pad.l+ffi*bw+bw/2;
-    anno+=`<line x1="${fx}" y1="${pad.t-4}" x2="${fx}" y2="${pad.t+ch}" stroke="#d4566b" stroke-width="1" stroke-dasharray="2 4" opacity=".75"/>
-    <text x="${fx-4}" y="${pad.t-12}" text-anchor="end" class="barlabel" style="fill:#d4566b;font-weight:700;letter-spacing:.1em">★ FREE FOR ALL · 1ST</text>`;}
-  const mlab={"01":"JAN","02":"FEB","03":"MAR","04":"APR","05":"MAY","06":"JUN"};
+  const mark=(nm,label,col,side)=>{const i=rides.findIndex(x=>x.n.indexOf(nm)===0);if(i<0)return"";
+    const ax=pad.l+i*bw+bw/2;
+    return `<line x1="${ax}" y1="${pad.t-4}" x2="${ax}" y2="${pad.t+ch}" stroke="${col}" stroke-width="1" stroke-dasharray="2 4" opacity=".75"/>
+    <text x="${ax+(side==='end'?-4:4)}" y="${pad.t-12}" text-anchor="${side}" class="barlabel" style="fill:${col};font-weight:700;letter-spacing:.1em">${label}</text>`;};
+  anno+=mark("Dirty Bloom","DIRTY BLOOM &#9650; 1724","#e8b54a","start");
+  anno+=mark("Free for All","&#9733; FREE FOR ALL, 1ST","#d4566b","middle");
+  anno+=mark("Sturdy 2026","&#127937; RACE DAY","#ffd166","end");
+  const mlab={"01":"JAN","02":"FEB","03":"MAR","04":"APR","05":"MAY","06":"JUN","07":"JUL"};
   const mOrder=[],mSpan={};
   rides.forEach((x,i)=>{const m=x.d.slice(5,7);if(!(m in mSpan)){mSpan[m]={f:i,l:i};mOrder.push(m);}mSpan[m].l=i;});
   let divs="";
-  mOrder.forEach(m=>{const g=mSpan[m];
-    const dx=pad.l+g.f*bw, lx=pad.l+((g.f+g.l)/2+0.5)*bw;
+  mOrder.forEach(m=>{const g=mSpan[m], dx=pad.l+g.f*bw, lx=pad.l+((g.f+g.l)/2+0.5)*bw;
     divs+=`<line x1="${dx}" y1="${pad.t}" x2="${dx}" y2="${pad.t+ch+6}" stroke="var(--line-soft)" stroke-width="1"/>`;
     divs+=`<text class="axis" x="${lx}" y="${Hh-14}" text-anchor="middle" style="fill:var(--cream-dim);font-weight:700;letter-spacing:.16em">${mlab[m]}</text>`;});
   document.getElementById('rampchart').innerHTML=`<svg class="chart" viewBox="0 0 ${W} ${Hh}">${divs}${bars}${anno}</svg>`+
    `<div class="legend">`+Object.keys(REGION_HEX).filter(k=>rides.some(x=>x.r===k)).map(k=>`<span><i style="background:${REGION_HEX[k]}"></i>${k}</span>`).join('')+`</div>`;
 })();
 
-/* ================= 07 LEADERBOARD ================= */
+/* 06 leaderboard */
 (function(){
   const top=R.slice().sort((a,b)=>b.re-a.re).slice(0,10);
   document.getElementById('board').innerHTML=top.map((x,i)=>`
-    <tr>
+    <tr class="${x.n.indexOf('Sturdy 2026')===0?'israce':''}">
       <td class="l rk">${String(i+1).padStart(2,'0')}</td>
-      <td class="l nm-c">${x.n}<small>${x.d} · ${x.r.toUpperCase()}</small></td>
-      <td>${fmt(MI(x.dist),1)} mi</td>
-      <td>${fmt(FT(x.el))} ft</td>
-      <td>${H(x.mt).toFixed(1)} h</td>
-      <td><b>${x.re||'·'}</b></td>
+      <td class="l nm-c">${x.n}<small>${x.d} &middot; ${x.r.toUpperCase()}</small></td>
+      <td>${fmt(MI(x.dist),1)} mi</td><td>${fmt(FT(x.el))} ft</td>
+      <td>${H(x.mt).toFixed(1)} h</td><td><b>${x.re||'·'}</b></td>
     </tr>`).join('');
 })();
 
-/* ================= SIDE NAV ================= */
+/* side nav */
 (function(){
-  const secs=[...document.querySelectorAll('section.sec')];
-  const nav=document.getElementById('sidenav');
+  const secs=[...document.querySelectorAll('section.sec')], nav=document.getElementById('sidenav');
   nav.innerHTML=`<a href="#top"><i></i><span>TOP</span></a>`+secs.map((s,i)=>
     `<a href="#${s.id}" data-for="${s.id}"><i></i><span>${String(i+1).padStart(2,'0')} ${s.dataset.title.toUpperCase()}</span></a>`).join('');
   const links={};nav.querySelectorAll('a[data-for]').forEach(a=>links[a.dataset.for]=a);
-  const spy=new IntersectionObserver(es=>es.forEach(e=>{
-    const a=links[e.target.id];if(!a)return;
-    if(e.isIntersecting){nav.querySelectorAll('a').forEach(x=>x.classList.remove('on'));a.classList.add('on');}
-  }),{rootMargin:"-30% 0px -55% 0px"});
+  const spy=new IntersectionObserver(es=>es.forEach(e=>{const a=links[e.target.id];if(!a)return;
+    if(e.isIntersecting){nav.querySelectorAll('a').forEach(x=>x.classList.remove('on'));a.classList.add('on');}}),
+    {rootMargin:"-30% 0px -55% 0px"});
   secs.forEach(s=>spy.observe(s));
 })();
 
-/* ================= TOOLTIP ================= */
+/* tooltip */
 (function(){
   const tip=document.getElementById('tip');
-  document.addEventListener('mousemove',e=>{
-    const t=e.target;
-    if(t&&t.dataset&&t.dataset.tip){
-      tip.innerHTML=t.dataset.tip;tip.style.opacity=1;
-      const x=Math.min(e.clientX+16,window.innerWidth-280);
-      tip.style.left=x+'px';tip.style.top=(e.clientY-12)+'px';
-    }else tip.style.opacity=0;
-  });
+  document.addEventListener('mousemove',e=>{const t=e.target;
+    if(t&&t.dataset&&t.dataset.tip){tip.innerHTML=t.dataset.tip;tip.style.opacity=1;
+      tip.style.left=Math.min(e.clientX+16,window.innerWidth-280)+'px';tip.style.top=(e.clientY-12)+'px';}
+    else tip.style.opacity=0;});
 })();
 
-/* ================= REVEALS + COUNT-UPS + DRAWS ================= */
+/* reveals + count ups */
 (function(){
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function countUp(el){
-    const target=parseFloat(el.dataset.num),dec=+(el.dataset.dec||0);
+  function countUp(el){const target=parseFloat(el.dataset.num),dec=+(el.dataset.dec||0);
     if(reduce){el.textContent=fmt(target,dec);return;}
     const t0=performance.now(),dur=1700;
     (function f(t){const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);
-      el.textContent=fmt(target*e,dec);
-      if(k<1)requestAnimationFrame(f);})(t0);
-  }
-  const io=new IntersectionObserver(es=>es.forEach(e=>{
-    if(!e.isIntersecting)return;
-    const el=e.target;
-    el.classList.add('in');
+      el.textContent=fmt(target*e,dec); if(k<1)requestAnimationFrame(f);})(t0);}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
+    const el=e.target; el.classList.add('in');
     el.querySelectorAll('[data-num]').forEach(countUp);
     el.querySelectorAll('.ldfill').forEach(f=>f.style.width=f.dataset.w);
     if(el.querySelector('#profilechart')&&window.__drawProfile)window.__drawProfile();
-    io.unobserve(el);
-  }),{threshold:.14});
+    io.unobserve(el);}),{threshold:.14});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   document.querySelectorAll('.chartbox').forEach(el=>io.observe(el));
   if(reduce){document.querySelectorAll('.reveal,.chartbox').forEach(el=>el.classList.add('in'));
@@ -784,11 +655,12 @@ R.forEach(x=>{T.dist+=x.dist;T.el+=x.el;T.mt+=x.mt;T.cal+=x.cal;T.re+=x.re;T.pr+
     if(window.__drawProfile)window.__drawProfile();}
 })();
 
-/* parallax topo */
+/* parallax */
 (function(){
   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   const topo=document.getElementById('topo');let raf=null;
-  addEventListener('scroll',()=>{if(raf)return;raf=requestAnimationFrame(()=>{topo.style.transform=`translateY(${scrollY*0.06}px)`;raf=null;});},{passive:true});
+  addEventListener('scroll',()=>{if(raf)return;raf=requestAnimationFrame(()=>{
+    topo.style.transform=`translateY(${scrollY*0.06}px)`;raf=null;});},{passive:true});
 })();
 </script>
 </body>
